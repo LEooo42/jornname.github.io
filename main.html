@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jorn</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="apps.js"></script>
+</head>
+<body>
+    <h1 class="header">Сгенирируй Своего Джорна Уикиса</h1>
+    <button onclick="generateWord()">Сгенирировать</button>
+    <div id="output"></div>
+    <div class="pic">
+        <img src="./images/image_1_transparent-removebg-preview.png" alt="pic-2" class="pic-2">
+        <img src="./images/image_2_transparent-removebg-preview.png" alt="pic-3" class="pic-3">
+        <img src="./images/image_3_transparent-removebg-preview.png" alt="pic-3" class="pic-3">
+    </div>
+</body>
+<script>
+    function generateWord(){
+    const names = ['Джон', 'Джордано', 'Джордан','Джош','Джим','Джорн','Джимми','Джо','Джорно','Джедай','Джемпер','Джаггернаут','Джокер','Джинн','Джалапеньо','Джекпот','Джаггер','Джек'];
+    const lastnames=['Уикис','Уикенд','Уик','Сквикис','Уикимаус','Уичхаус','Уикендович','Уистрел','Уильямс','Уиилтромайт','Беггинс','Бипкинс','Уикидон','Уикинштейн','Уикторин','Чеккерс'];
+    
+    const randomWord = names[Math.floor(Math.random() * names.length)];
+    const randomLastName = lastnames[Math.floor(Math.random() * lastnames.length)];
+    
+    document.getElementById('output').textContent = randomWord + ' ' + randomLastName;
+}
+
+</script>
+</html>
